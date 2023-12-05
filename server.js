@@ -24,7 +24,7 @@ let strategy = new JwtStrategy(jwtOptions, function (jwt_payload, next) {
   
     if (jwt_payload) {
       // The following will ensure that all routes using
-      // passport.authenticate have a req.user._id, req.user.userName, req.user.favourites & req.user.history values
+      // passport.authenticate have a req.user._id, req.user.userName
       // that matches the request payload data
       next(null, {
         _id: jwt_payload._id,
